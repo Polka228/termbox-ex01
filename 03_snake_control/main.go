@@ -79,6 +79,12 @@ func main() {
 				s.dir = coord{1, 0}
 				s = moveSnake(s)
 			// The program exits when a user presses 'Esc'.
+			case termbox.KeyArrowDown:
+				s.dir = coord{0, 1}
+				s = moveSnake(s)
+			case termbox.KeyArrowUp:
+				s.dir = coord{0, -1}
+				s = moveSnake(s)
 			case termbox.KeyEsc:
 				return
 			}
